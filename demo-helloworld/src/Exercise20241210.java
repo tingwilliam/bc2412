@@ -42,7 +42,5 @@ public class Exercise20241210 {
     // (2) Java Virtual Machine (JVM) -> convert class file to machine code -> execute machine code
 
 
-
-
   }
 }
