@@ -1,4 +1,3 @@
-# bc2412
 # welcome to the bootcamp!
 ## sub-heading
 ### heading 3
