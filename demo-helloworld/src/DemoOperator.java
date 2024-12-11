@@ -93,6 +93,16 @@ public class DemoOperator {
     System.out.println(y11); // 24
     System.out.println(x11); // 5
 
+    int x12 = 3;
+    int y12 = (x12++ + 3) * ++x12;
+    // Step1: 3 + 3
+    // Step2: x12 become 4
+    // Step3: 6 * 5
+    // Step4: assignment
+    // Step5: x12 become 
+    System.out.println(y12); // 30
+    System.out.println(x12); // 5  
+
 
 
 
