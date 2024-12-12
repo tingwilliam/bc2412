@@ -79,6 +79,8 @@ public class homework {
     int result = e - o * x / y;
     //result = 7 - 8 * 2 / 4;
 
-   System.out.println("The variable result is " + result);
+    System.out.println("The variable result is " + result);
+
+
   }
 }
