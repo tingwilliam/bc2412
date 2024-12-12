@@ -41,6 +41,25 @@ public class Exercise20241210 {
       // (1.2) compile success -> class file
     // (2) Java Virtual Machine (JVM) -> convert class file to machine code -> execute machine code
 
+    int a = 10;
+    if (a == 9) {
+      System.out.println("a is equals to 9");
+    } else if (a >= 0 && a < 9 ) {
+      System.out.println("a is between 0 and 8");
+    // how about a > 9?
+    } else if (a > 9) {
+      System.out.println("a > 9");
+    } else if (a < 0 ){
+      System.out.println("a < 0");
+    }
+    String str = "I love Java. I love coding";
+    if (str.length() == 27) {
+      System.out.println("str length=27");
+    } else if (str.length() < 27) { // code here ... add the condition
+      System.out.println("str length < 27");
+    } else if (str.length()  > 27) { // code here ... complete the code
+      System.out.println("str length > 27");
+    }
 
   }
-}
+  }
