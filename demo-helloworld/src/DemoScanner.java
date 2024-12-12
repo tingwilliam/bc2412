@@ -25,7 +25,7 @@ public class DemoScanner {
     int totalMinutes = 0;
     for (int i = 0 ; i < day ; i++) {
       for  (int j = 0 ; j < i ; j++)
-    totalMinutes +=24;
+    totalMinutes += 24*60;
   }
     System.out.println(totalMinutes);
 

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Exercise20241210 {
 
   public static void main(String[] args) {
@@ -61,5 +63,11 @@ public class Exercise20241210 {
       System.out.println("str length > 27");
     }
 
-  }
+
+    }  
+      
+  
+
+
+
   }
