@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise20241210 {
+public class JavaQuest2 {
 
   public static void main(String[] args) {
     double priceForApple = 7.3;

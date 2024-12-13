@@ -1,4 +1,4 @@
-public class trainingmyself {
+public class training {
   public static void main(String[] args) {
 
     System.out.println("dear my friend");
@@ -11,6 +11,7 @@ public class trainingmyself {
 
     int c = 3 / 2;
     System.out.println (c); //1
+
 
     double d = 3.0 / 2;
     System.out.println (d); //1.5
@@ -83,8 +84,16 @@ public class trainingmyself {
     boolean result1 = a1.equals(a2);
     System.out.println(result1);
 
+    String q = "hello" ;
+    if(q.equals("hello")) {
+    System.out.println("true");
+    } else {
+    System.out.println("false");
+    }
 
+  }
 
+ 
 
 
 
@@ -99,4 +108,3 @@ public class trainingmyself {
 
 
   }
-}
