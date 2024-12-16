@@ -1,0 +1,65 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class DemoBigDecimal {
+  public static void main(String[] args) {
+    double result = 0.2 + 0.1;
+    System.out.println(result); //0.3000000000000004
+    if (result == 0.3) {
+      System.out.println("Result is 0.3.");
+    }else {
+      System.out.println("Result is NOT 0.3.");
+    }
+    // Solution: BigDecimal
+    BigDecimal bd1 = BigDecimal.valueOf(0.2);
+    BigDecimal bd2 = BigDecimal.valueOf(0.1);
+    BigDecimal bd3 = bd1.add(bd2);
+    System.out.println(bd3.doubleValue()); //0.3
+
+    System.out.println(0.3 - 0.1); //0.19999999999999998
+    BigDecimal bd4 = BigDecimal.valueOf(0.3);
+    BigDecimal bd5 = BigDecimal.valueOf(0.1);
+    BigDecimal bd6 = bd4.subtract(bd5);
+    System.out.println(bd6.doubleValue()); // 0.2
+    //subtract
+
+    System.out.println(0.1 * 0.2); //0.200000000000000004
+    BigDecimal bd7 = BigDecimal.valueOf(0.1);
+    BigDecimal bd8 = BigDecimal.valueOf(0.2);
+    BigDecimal bd9 = bd7.multiply(bd8);
+    System.out.println(bd9.doubleValue()); 
+    //multiply
+
+    System.out.println(0.3 / 0.1);  //2.99999999999999996
+    BigDecimal bd10 = BigDecimal.valueOf(0.3);
+    BigDecimal bd11 = BigDecimal.valueOf(0.1);
+    BigDecimal bd12 = bd10.divide(bd11);
+    System.out.println(bd12.doubleValue()); 
+    //divide
+
+    //10 / 3 ;
+    BigDecimal bd13 = BigDecimal.valueOf(10);
+    BigDecimal bd14 = BigDecimal.valueOf(3);
+    BigDecimal bd15 = bd13.divide(bd14, BigDecimal.ROUND_DOWN);
+    System.out.println(bd15.doubleValue()); //3.0, Non-termination decimal expansion
+
+    BigDecimal bd16 = BigDecimal.valueOf(4.565).setScale(2, RoundingMode.HALF_DOWN);
+    System.out.println(bd16.doubleValue()); //4.56
+
+    BigDecimal bd17 = BigDecimal.valueOf(4.566);
+    System.out.println(bd17.setScale(2, RoundingMode.HALF_DOWN)); //4.57
+    System.out.println(bd17.setScale(2, RoundingMode.HALF_UP)); //4.57
+
+    BigDecimal bd18 = BigDecimal.valueOf(4.565);
+    System.out.println(bd18.setScale(2, RoundingMode.HALF_DOWN)); //4.56
+    System.out.println(bd18.setScale(2, RoundingMode.HALF_UP)); //4.57
+
+    BigDecimal bd19 = BigDecimal.valueOf(4.565);
+    System.out.println(bd19.setScale(2, RoundingMode.DOWN)); //4.56
+    System.out.println(bd19.setScale(2, RoundingMode.UP)); //4.57
+
+
+
+  }
+  
+}
