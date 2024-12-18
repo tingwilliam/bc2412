@@ -124,9 +124,9 @@ public class DemoArray {
                 arr7[i + 1] = temp;
             }
         }
-        System.out.println(arr7[0]);
+        System.out.println(arr7[0]); //-8
 
-        System.out.println(Arrays.toString(arr7));
+        System.out.println(Arrays.toString(arr7)); // [-8, 9, 99, 98, 109]
 
 
         // move max value to the tail
@@ -194,17 +194,26 @@ public class DemoArray {
     }
     System.out.println(String.valueOf(chArr));  //"ifmmp", char Array -> String
 
-    //assume we have small letter ONLY
-    char[] arr12 = new char[] {'p', 'a', 'p','b', 'a', 'p'};
+    // assume we have small letter ONLY
+    char[] arr12 = new char[] {'p', 'a', 'p', 'b', 'p', 'a'};
+    char maxNumChar = ' ';
+    int[]counters = new int[26];
+for (int i =0; i < arr12.length; i++) {
+    counters[arr12[i] - 'a']++;
+}
+int max2 = Integer.MIN_VALUE;
+    for (int i = 0; i < counters.length; i++) {
+        if (counters[i] > max2) {
+        maxNumChar = (char) (i +97);
+        max2 = counters[i];
+        }
+    }
+    System.out.println(maxNumChar); //p 
+
+    //p - a ->
     // more than one loop
-    int[] ascii = new int[arr12.length];
-    for (int i = 0; i < arr12.length; i++) {
-    ascii[i] = arr12[i];
-    }
-    for (int i =0; i < arr12.length; i++) {
-        System.out.println(ascii[i]);
-    }
-    System.out.println(maxNumChar); // p
+    // System.out.println(maxNumChar); // p
+
 
 
 

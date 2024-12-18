@@ -175,14 +175,14 @@ public class DemoDataType {
 
     char q1 = '0';
     int u1 = q1 ; // !char value can be assigned to int ???
-    System.out.println(u1);
+    System.out.println(u1);//48
 
     char q3 = 'A';
     int u2 = q3 ; // !char value can be assigned to int ???
-    System.out.println(u2);
+    System.out.println(u2);//65
 
     char q4 = 65;
-    System.out.println(q4);
+    System.out.println(q4);//A
     int u4 = q4 ; // !char value can be assigned to int ???
     System.out.println(u4);
 
@@ -205,6 +205,9 @@ public class DemoDataType {
     long l10 = 'a';
     float f10 = 'a';
     double d10 = 'a';
+
+    String s;
+    s.c
 
 
 
