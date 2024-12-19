@@ -103,7 +103,7 @@ double squareArea = BigDecimal.valueOf(length) //
 
     double u2 = 3.556;
     System.out.println(Math.round(u2)); //4
-    System.out.println(Math.abs(-9L));
+    System.out.println(Math.abs(-9L)); //9
 
 
 

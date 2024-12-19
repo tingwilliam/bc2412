@@ -106,8 +106,9 @@ public class DemoForLoop {
     // 4. "abcdefghijkd"
 
     // 2. check if the string value contains given sub-string
-    String substr = "ll";
     String str2 = "hello";
+    String substr = "ll";
+
 
     boolean isSubstringExist = false;
     for (int i = 0; i < str2.length() - substr.length(); i++) {

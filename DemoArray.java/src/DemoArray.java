@@ -214,20 +214,52 @@ int max2 = Integer.MIN_VALUE;
     // more than one loop
     // System.out.println(maxNumChar); // p
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+arr = new int[] {1, 9, 8, 4, 6, 5, 2, 3, 7};
+int apple = 8; 
+for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == apple) {
+        System.out.println("Found" + apple + " at index "+i);
+        break;
     }
-    }
+}
+
+   String[] operations = new String[] {"--X","X++","X++"};
+
+        int total = 0;
+        for (int i = 0; i < operations.length; i++) {
+            // ++X, X++ -> +1
+            // --X, X-- -> -1
+            if (operations[i].charAt(0) == '+' || operations[i].charAt(2) == '+')
+                total++;
+            else
+                total--;
+        }
+        System.out.println(total);
+     
+
+
+//
+    int[] arr20 = new int[] {20, -20, 90, 50, -40};
+    //Sorting, without create a new array
+    //Move the max value to tail
+    //Step 1: [X, X, X, X, 90], when  i =0
+    //Step 2: [X, X, X, 50, 90], when  i =1
+    //Step 3: [X, X, 20, 50, 90], when  i =2
+    //Step 4: [X, -20, 20, 50, 90], when  i =3
+    //Step 5: [-40, -20, 20, 50, 90]
+
+    for(int i = 0; i < arr20.length -1; i++) {// 0, 1, 2, 3
+      for(int j = 0; j < arr20.length -1 ; j++) {//Swap index //i = 3, j = 0
+        if(arr20[j] > arr20[j + 1]) {
+            temp = arr20[j];
+            arr20[j] = arr20[j + 1];
+            arr20[j + 1] = temp;
+          }
+        }
+     }
+    System.out.println (Arrays.toString(arr20)); //[-40, -20, 20, 50, 90]
+
+}
+}
 
 

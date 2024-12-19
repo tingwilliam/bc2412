@@ -40,17 +40,23 @@ public class JavaQuest9 {
     // int length()
     // prints 19
     // code here ...
+    System.out.println(str.length());
 
     // Use String substring(int start, int end)
     // prints "ren"
     // code here ...
+    System.out.println(str.substring(5, 8));
 
     // print "VENTURENIXLAB, JAVA"
     // prints "venturenixlab, java"
     // code here ...
+    System.out.println(str.toUpperCase());
+    System.out.println(str.toLowerCase());
 
     // Method Chaining (one line to complete)
     // prints "V*NTUR*NIXLAB, JAVA!!!"
     // code here ...
+    System.out.println("VenturenixLAB, Java".replace("e","*").toUpperCase().concat("!!!"));
+
   }
   }

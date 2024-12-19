@@ -27,8 +27,13 @@ public class JavaQuest10 {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     // code here ...
-
+    String newarr = i; {
+    for ( int i = 0; i <newvalue.length; i++) {
+      if (newvalue[i] )
+    }
+}
+    System.out.println("New Array : " + Arrays.toString(newarr));
     // my_array = newArr;
-    System.out.println("New Array: " + Arrays.toString(newArr));
+    //System.out.println("New Array: " + Arrays.toString(newArr));
   }
 }

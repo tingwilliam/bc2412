@@ -33,7 +33,7 @@ public class training {
 
     float j = 42.2f;
     double k = j;
-    System.out.println(k);
+    System.out.println(k); //42.20000076293945
 
     // int l = 126; 
     // ! byte m = l; byte-> int
@@ -42,9 +42,9 @@ public class training {
     char l = 'a';
     char l2 = ' ';
     char l3 = '=';
-    System.out.println(l);
-    System.out.println(l2);
-    System.out.println(l3);
+    System.out.println(l); //a
+    System.out.println(l2); //
+    System.out.println(l3); //=
 
     double peter = 65;
     boolean isYounger = peter<=65; 
@@ -56,12 +56,12 @@ public class training {
 
     String password = "abcd1234";
     String emailAddress = "abc@gmail.com";
-    System.out.println("password");
-    System.out.println(password);
-    System.out.println("password is " + password);
-    password = password + 5;
-    System.out.println("password is " + password);
-    System.out.println(emailAddress);
+    System.out.println("password"); //password
+    System.out.println(password); //abcd1234
+    System.out.println("password is " + password); //password is abcd1234
+    password = password + 5; 
+    System.out.println("password is " + password); //password is abcd12345
+    System.out.println(emailAddress); //abc@gmail.com
 
     char firstWord = 'A';
     String idCardNum = "123456";
