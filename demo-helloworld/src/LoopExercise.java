@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class LoopExercise {
   public static void main(String[] args) {
     // 1. Print 6 times hello
@@ -10,11 +12,13 @@ public class LoopExercise {
     // 2. Expected output: "0,1,2,3,4"
     // Use: for loop
     for(int i= 0; i < 5; i++) {
+    if(i<5) {
     System.out.println(i);
-      if(i<4){
-      System.out.print(",");
     }
+      //int[] arr2 = 
+      //System.out.print(Arrays.toString(i));
     }
+    
 
 
     // 3. Print even numbers between 2 and 20
@@ -112,16 +116,33 @@ public class LoopExercise {
     // Print arr10: ["akc", "kkk", "k", "kbk", "mkk"]
     // Use: for loop + replace method
     String[] arr10 = new String[] {"akc", "xxx", "x", "xbx", "mkx"};
-
+    for( int i =   0; i < arr10.length; i++) { 
+      arr10 [i] = arr10 [i].replace("x" , "k");
+    }
+    System.out.println(Arrays.toString(arr10));
+    
     // 11. Count the number of Uppercase char value in the given string s11
     // Print "count uppercase=4"
     // Use: for loop + if
     String s11 = "kLKloOOu";
+    int count1 = 0;
+    for (int i = 0 ; i < s11.length(); i++) {
+      char upperCase = s11.charAt(i);
+      if (upperCase >= 'A' && upperCase <= 'Z' ){
+      count1++;
+    }
+    }
+    System.out.println("count uppercase=" + count1);
+ 
 
     // 12. Print the following pattern of * value
     // *****
     // *****
     // *****
+
+    for (int i1 = 0; i1 < 3 ; i1++) {
+      System.out.println("*****");
+    }
 
     // 13. Given a string value s13, each of the char value has its score.
     // Calculate the total score
@@ -144,6 +165,7 @@ public class LoopExercise {
 
     // 17. Add value 0.1 to each of value in array arr16
     // Print: [0.3, 0.4, 0.7]
+    // Use: BigDecimal
 
     // 18. Count the number of target strings in the String[]
     String[] arr18 = new String[] {"Steve", "Tommy", "Katie", "Tommy", "Lydia"};
@@ -155,9 +177,17 @@ public class LoopExercise {
     // Print: "49280"
     String s19 = "40289";
 
+
+
+   //char[] arr = new char [s. length()];
+    //for (int i = 0; i < indices.length; i++) {
+        //arr[indices[i]] = s.charAt(i);
+    }
+
+
+
     // 20. Find the longest String in the String array
     // Print "longest=programming"
     String[] arr20 = new String[] {"python", "array", "programming", "java", "bootcamp"};
     
   }
-}

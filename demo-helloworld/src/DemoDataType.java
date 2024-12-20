@@ -207,7 +207,7 @@ public class DemoDataType {
     double d10 = 'a';
 
     String s;
-    s.c
+    //s.c
 
 
 
