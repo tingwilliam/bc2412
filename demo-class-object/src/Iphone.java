@@ -18,5 +18,15 @@ public class Iphone {
   public String getColor() {
     return this.color;
   }
+  //setter
+    public void setMemory(String memory) {
+      this.memory = memory;
+    }
+    public void setModel(String model) {
+      this.model = model;
+    }
+    public void setColor(String color) {
+      this.color = color;
+    }
 
 }

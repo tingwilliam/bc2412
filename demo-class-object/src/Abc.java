@@ -45,6 +45,10 @@ for (Person p : persons) {
   // vincent, 18, vincent@gmail.com
 }
 
+    //String s2 = p2;
+    //String s3 = new integer(23);
+    
+
 String s1 = "hello";
 String[] strings = new String[] {s1, "world"};
 

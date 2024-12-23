@@ -4,13 +4,27 @@ public class Person { // blueprint - define a Person
   private String name;
   private int age;
   private String emailaddress;
+  private char gender; // F/M
 
   // constructor (Not Method)
   // constructor is to create object
-  public Person (String name, int age, String emailaddress) {
+  public Person (String name, int age, String emailaddress, char gender) {
       this.name = name;
       this.age = age;
       this.emailaddress = emailaddress;
+      this.gender = gender;
+  }
+
+  public int getNameLength() {
+    return this.name.length();
+  }
+
+    public boolean isElderly() {
+
+    }
+
+  public boolean isMale() {
+    return this.gender == 'M' ? true : false;
   }
 
   //getter (instance = object)
@@ -39,5 +53,15 @@ public class Person { // blueprint - define a Person
 public static int sum(int x, int y){
     return x + y;
 }
+public static void main(String[]args) {
 
+    Person P1 = new Person("Jimmy",5,"jimmy@gmail.com",'M');
+    System.out.println(p1. isMales()); //true
+    System.out.println(p1. getName().length()); //5
+    System.out.println(p1. getNameLength()); //5
+    System.out.println(p1. isElderly()); //false
+    p1. setAge(66);
+System.out.println(p1.isElderly()); //true
+
+}
 }

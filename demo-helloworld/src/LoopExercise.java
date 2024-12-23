@@ -154,18 +154,57 @@ public class LoopExercise {
     // u -> 4 score
     // for other character, -1 score
     String s13 = "lrlaudbucp";
-    switch (s13) {
-      l = 1; r = 3; d = 3; u = 4;
-      default: 
+    int totalScore = 0; 
 
-
+    for(int i = 0 ; i <s13.length(); i++) {
+      char ch = s13.charAt(i);
+    switch(ch) {
+      case 'l':
+      totalScore += 1;
+      break;
+      case 'r':
+      totalScore += 3;
+      break;
+      case 'd':
+      totalScore += 2;
+      break;
+      case 'u':
+      totalScore += 4;
+      break;
+      default:
+      totalScore -= 1;
+      break;
+      }
     }
+    System.out.println("Total score: " + totalScore);
+
     
     // 14. Assign the long values of 1, 4, 9, -4 to the given array arr14
     long[] arr14 = new long[4];
+    arr14[0] = 1;
+    arr14[1] = 4;
+    arr14[2] = 9;
+    arr14[3] = -4; 
+
+    for (long value : arr14) {
+      System.out.println(value);
+  }
 
     // 15. Find the max value and min value in arr14
     // Use One Loop + if
+    long maxValue = arr14[0];
+    long minValue = arr14[0];
+
+    for (int i = 0; i < arr14.length; i++) {
+      if (arr14[i] > maxValue) {
+        maxValue = arr14[i];
+      }
+      if (arr14[i] < minValue) {
+        minValue = arr14[i];
+      }
+    }
+    System.out.println("max value:" + maxValue);
+    System.out.println("min value:" + minValue);
 
     // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.5
 
@@ -188,7 +227,7 @@ public class LoopExercise {
    //char[] arr = new char [s. length()];
     //for (int i = 0; i < indices.length; i++) {
         //arr[indices[i]] = s.charAt(i);
-    }
+    
 
 
 
@@ -196,4 +235,6 @@ public class LoopExercise {
     // Print "longest=programming"
     String[] arr20 = new String[] {"python", "array", "programming", "java", "bootcamp"};
     
-  }
+  
+}
+}
