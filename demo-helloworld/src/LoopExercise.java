@@ -154,6 +154,12 @@ public class LoopExercise {
     // u -> 4 score
     // for other character, -1 score
     String s13 = "lrlaudbucp";
+    switch (s13) {
+      l = 1; r = 3; d = 3; u = 4;
+      default: 
+
+
+    }
     
     // 14. Assign the long values of 1, 4, 9, -4 to the given array arr14
     long[] arr14 = new long[4];

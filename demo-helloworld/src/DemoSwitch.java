@@ -10,7 +10,7 @@ public class DemoSwitch {
    } else if (x ==3)  {
     System.out.println("x=3"); // print
    } else {
-    System.out.println(" simethings else ...");
+    System.out.println(" somethings else ...");
    }
 
    // switch
