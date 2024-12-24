@@ -20,7 +20,7 @@ public class Person { // blueprint - define a Person
   }
 
     public boolean isElderly() {
-
+    return this.age > 65;
     }
 
   public boolean isMale() {
@@ -55,8 +55,8 @@ public static int sum(int x, int y){
 }
 public static void main(String[]args) {
 
-    Person P1 = new Person("Jimmy",5,"jimmy@gmail.com",'M');
-    System.out.println(p1. isMales()); //true
+    Person p1 = new Person("Jimmy",5,"jimmy@gmail.com",'M');
+    System.out.println(p1. isMale()); //true
     System.out.println(p1. getName().length()); //5
     System.out.println(p1. getNameLength()); //5
     System.out.println(p1. isElderly()); //false

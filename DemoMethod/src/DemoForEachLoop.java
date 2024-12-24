@@ -40,10 +40,6 @@ public class DemoForEachLoop {
     String[] arr3 =new String[] {"abc", "ijk", "def"}; 
     String target = "ijk";
     // true
-    for (String [] : arr3) {
-        
-    }
-    System.out.println();
-  
+
   }
 }

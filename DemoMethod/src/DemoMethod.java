@@ -53,9 +53,9 @@ public class DemoMethod {
     }
     public static int totalMinutes(int day) {
     int minutes = 0;
-    for (int i =0; 1 <day; i++) {
-        for (int j = 0; j< 24; j++) {
-            minutes += 60;
+    for (int i = 0; 1 < day; i++) {
+        for (int j = 0; j < 24; j++) {
+            minutes += 60; 
         }
     }
     return minutes;
@@ -69,6 +69,14 @@ public static int countEven(int[] arr) { // short[]
     }
     return count;
 }    
+public static int countEven(long[] arr) {
+    int count = 0; 
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0)
+        count++;
+    }
+    return count;
+  }
 
 ////////////////////////////////////////////////////////////////
     public static void main(String[] args) {
@@ -88,16 +96,18 @@ public static int countEven(int[] arr) { // short[]
     y = sum(19, 21);
     System.err.println(y); //40
 
+
+    System.out.println(subtract(100, 98)); // 100.0 - 98.0 -> 2.0
     //call subract() method
-    double c;
-    c = subtract(10, 11);
-    System.out.println(c); //-1.0
-    c = subtract(19, 11);
-    System.out.println(c); //8.0
-    y1 = multiply(10, 11);
-    System.out.println(y); //110
-    y1 = multiply(19, 11);
-    System.out.println(y); //209
+    //double c;
+    //c = subtract(10, 11);
+    //System.out.println(c); //-1.0
+    //c = subtract(19, 11);
+    //System.out.println(c); //8.0
+    //y1 = multiply(10, 11);
+    //System.out.println(y); //110
+    //y1 = multiply(19, 11);
+    //System.out.println(y); //209
 
     System.out.println(countCharacter("hello", 'l')); //2
     System.out.println(countCharacter("abc", 'l')); //0
@@ -107,10 +117,10 @@ public static int countEven(int[] arr) { // short[]
     sum(1, 2.0); //sum(int x, double y)
     sum(1, 2); //sum(intx, int y)
     sum(1.0, 2); //sum(double x, int y)
-    System.out.println(sum(2, "123"));//
+    System.out.println(sum(2, "123")); //125.0
 
 
-    System.out.println(countEven(new long[]{1L, 3L, 2L, 6L})); //2
-    System.out.println(countEven(new lnt[]{1, 3, 2, 6})); //2
+    System.out.println(countEven(new long[] {1L, 3L, 2L, 6L})); //2
+    System.out.println(countEven(new int[] {1, 3, 2, 6})); //2
 }
 }
