@@ -32,7 +32,9 @@ public class Item {
 
   public double totalAmount() {
     //BigDecimal
-    return this.quantity;
+    return BigDecimal.valueOf (this.price) //
+    .multiply(BigDecimal.valueOf(this.quantity))//
+    .doubleValue();
   }
 
   public static String getName(Item item) {

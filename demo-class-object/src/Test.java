@@ -10,5 +10,9 @@ public class Test {
     //Compile OK -> pl come from Person.class, and this class has getAge() method
     //Runtime Error -> because p1 object reference finally cannot point to an object.
 
+    String1 str = new String1("abc");
+    System.out.println(str.charAt(1));
+    System.out.println())
+    System.out.println()
     }
   }
