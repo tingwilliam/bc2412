@@ -9,7 +9,7 @@ public class Supermarket {
     return this.availableStock;
   }
 
-  public void setAvailable(int availableStock) {
+  public void setAvailableStock(int availableStock) {
     this.availableStock = availableStock;
   }
   //public void moveIn(int numOfStock) {
