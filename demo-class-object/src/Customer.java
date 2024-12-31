@@ -56,6 +56,11 @@ public class Customer { //Person"has name, age
   } 
 
   // getOrders
+
+  public Order[] getOrders() {
+    return this.orders;
+  } 
+  
   public int orderSize() {
     return this.orders.length;
   }
@@ -65,7 +70,7 @@ public class Customer { //Person"has name, age
       //orders[1] = new Order();
       //orders[2] = new Order();
 
-    Customer c1 = new Customer(1L);
+    Customer c1 = new Customer(1L);// create customer object and them, write down the "address" into c1.
 
     Order o1 = new Order(1L);
     o1.addItem(new Item("ABC", 5.4, 5));

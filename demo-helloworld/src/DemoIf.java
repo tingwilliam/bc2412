@@ -51,7 +51,7 @@ public class DemoIf {
         System.out.println("It is not an adult");
       }
 
-    int score = 85;
+    int score = 100;
     char gender = 'F';
     // score >=90, grade A
     // ! score between 85 and 89 for female, grade T
