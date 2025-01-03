@@ -1,24 +1,24 @@
 
-public class Score {
+public class Candy2 {
 
-  private int candy;
+  private char color;
 
-  public Score(int candy){
-    this.candy = candy;
+    public static final char RED = 'R';
+    public static final char BLUE = 'B';
+    public static final char YELLOW = 'Y';
+
+  public Candy2(char color) {
+    this.color =color;
+  }
+  public char getColor() {
+    return color;
+  }
+    //TODO Auto-generated constructor stub
   }
 
-  public int getCandy() {
-    return this.candy;
-    int score = [i];
-    int getCandy = ' ';
-    if(score <= 80) {
-      getCandy = '2';
-    } else if (score >=60 && score <= 79) {
-      getCandy = '1';
-    } else{
-      getCandy = '0';
-    }
-  }
+
+
+
 
   //Expected Output:
   //20 candies -> distribute students according to their score
@@ -39,4 +39,4 @@ public class Score {
   // Student 5 has 4 candies
   // Student 6 has 0 candies
 
-}
+

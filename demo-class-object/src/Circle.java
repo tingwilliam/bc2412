@@ -28,7 +28,7 @@ public class Circle {
 
   public static void main(String[] args) {
     //area
-    Circle c1 = new Circle(3.0);
+    Circle1 c1 = new Circle1(3.0);
 
     //Presentation
     System.out.println(c1.calculateArea());//28.27'

@@ -65,7 +65,7 @@ public class Customer { //Person"has name, age
     return this.orders.length;
   }
     public static void main(String[] args) {
-      //Order[] orders = new Order[3];
+      //Order[] orders = new Order[3];.can
       //orders[0] = new Order();
       //orders[1] = new Order();
       //orders[2] = new Order();
