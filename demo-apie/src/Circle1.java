@@ -9,10 +9,21 @@ public class Circle1 extends Shape { //Parent Class: color
     //Contructor
       //area() return double
     public Circle1(String color, double radius) {
-      super(color); 
-      this.radius =radius;
-    }
+    // if you don't specify super() here, implicitly you are calling super()
+    super(color);
+    // super(color); // because you have "extends", you have to "super"
+    this.radius =radius;
+  }
 
+  // Override the parent given method
+  // compiler will help to check if the parent class has an area() method
+  @Override 
+  public double area() {
+    return BigDecimal.valueOf(this.radius) //
+        .multiply(BigDecimal.valueOf(this.radius)) //
+        .multiply(BigDecimal.valueOf(Math.PI)) //
+        .doubleValue();
+  }
   public double getradius() {
     return this.radius;
   }

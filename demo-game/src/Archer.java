@@ -1,16 +1,33 @@
 public class Archer extends Hero {
-  
+  private int maxHp;
+  private int maxMp;
 
-  public Archer(int hp, int mp, int level){
-    super(hp, mp, level);
-  }
-    public static void main(String[] args) {
-      Archer archer = new Archer(100, 50, 1);
 
-      System.out.println(
-      "hp:" + archer.getHp() + //
-      "mp:" + archer.getMp() + //
-      "level:" + archer.getLevel());//
-      
-    }
+
+public Archer(long id, int hp, int mp, int pa, int pd, 
+               int ma, int md, int ag, int cc, int cd){
+  super(id, hp, mp, pa, pd, ma, md, ag, cc, cd);
+  this.maxHp = 200;
+  this.maxMp = 100;
 }
+
+
+public String toString(){
+  return" LEVEL:" + super.getLevel() + " ID: " + super.getId() + 
+        " HP:" + super.getHp() + " MaxHP:" + this.maxHp + 
+        " MP:" + super.getMp() + " MaxMP:" + this.maxMp + 
+        " PA:" + super.getPa() + " PD:" + super.getPd() + 
+        " MA:" + super.getMa() + " MD:" + super.getMd() +
+        " AG:" + super.getAg() + " CC:" + super.getCc() +
+        " CD:" + super.getCd();
+}
+  
+    public static void main(String[] args) {
+      Archer archer = new Archer(123456, 200, 200, 1, 2, 3, 4, 5, 6, 7);
+      //Archer archer2 = new Archer(200, 200);
+      System.out.println(archer.toString());
+      //System.out.println(archer2.toString());
+
+  }
+}
+

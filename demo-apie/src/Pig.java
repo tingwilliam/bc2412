@@ -27,13 +27,15 @@ public class Pig extends Animal {
     Pig pig = (Pig) obj; // from Parent class to child class (int x = (int) 10L)
     return Objects.equals(pig.getAge(), this.age)
         && Objects.equals(pig.getName(), super.getName());
-    // return pig.
+    // return pig.getAge() == this.age //
+    // && pig.getName().equals(super.getName());
   }
 
   // implicitly extend Object.class (Object.hashCode() -> check if they are same memory object)
   @Override
   public int hashCode() {
-    return Objects.hash(this.age, super.getName()); // hash -> generate a new int number representing the object
+    return Objects.hash(this.age, super.getName()); 
+    // hash -> generate a new int number representing the object
   }
 
   @Override
@@ -71,10 +73,10 @@ public class Pig extends Animal {
 
     }
     if (myPig.equals(checkPig)) {
-      System.out.println("same!");
+      System.out.println("Same!");
       // after overside, if they are having same value of attributes, they shoud be same.
     } else {
-      System.out.println("Not same!"); // before override, because equal () implementation from Object.class
+      System.out.println("Not Same!"); // before override, because equal () implementation from Object.class
     }
     System.out.println(myPig.hashCode());
     System.out.println(checkPig.hashCode());
@@ -84,10 +86,10 @@ public class Pig extends Animal {
     System.out.println(s.equals(s2)); // true
     System.out.println(s.equals("hello")); // true
 
-    System.out.println("hello".toString());
-
-    System.out.println(pig2);
-  }
+    System.out.println("hello".toString()); // String.class override toString() method
+    System.out.println(pig2); // Pig[age=3, name=ABC]
   // toString()
   // hashCode()
+  }
+
 }

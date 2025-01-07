@@ -11,6 +11,8 @@ public class Square extends Shape {
     public double getlength() {
     return this.length;
   }
+
+  @Override
     public double area() {
     return BigDecimal.valueOf(this.length).multiply(BigDecimal.valueOf(this.length))
 .doubleValue();
@@ -22,5 +24,8 @@ public class Square extends Shape {
     square.area();
 
     System.out.println(square.getColor() + " area: " + square.area());
+    //System.out,prinln(shape.getRadius());
+
+
   }
 }

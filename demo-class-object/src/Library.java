@@ -1,7 +1,17 @@
 import java.util.Arrays;
 
 public class Library {
+    // A library has many books
+  // A Book has attributes, title & author
+  // The library has functions:
+  // 1) add a Book, return void.
+  // 2) removeByTitle, return Book.
+  // 3) searchByTitle, return Book[]
+
+  // Librarian (add/remove), Library(search), Book
+
   private Book[] books;
+  // private Librarian librarian;
 
   // constructor
   public Library() {
@@ -83,8 +93,7 @@ public class Library {
 
 
     Library lb1 = new Library();
-    Library lbn = new Librarian(lb1);
-
+    Librarian lbn = new Librarian(lb1);
     lb1.add(new Book("ABC", "Tommy"));
     lb1.add(new Book("DEF", "Jenny"));
     lb1.add(new Book("ABCD", "Jimmy"));
@@ -96,16 +105,16 @@ public class Library {
     //DEF Jenny
     //ABCD Jimmy
     
-        for (Book book : lb1.searchByTitle("BC")) {
-        System.out.println(book.getTitle() + " " + book.getAuthor());
-        }
+    for (Book book : lb1.searchByTitle("BC")) {
+    System.out.println(book.getTitle() + " " + book.getAuthor());
+    }
     // ABC Tommy
     //ABCD Jimmy
     
     Book removedBook = lbn.removeByTitle("DEF");
     System.out.println(removedBook.getTitle() + " " + removedBook.getAuthor()); // DEF Jenny
     System.out.println(lb1.size()); // 2
-        }
+  }
 
   public void setBooks(Book[] books2) {
     // TODO Auto-generated method stub
