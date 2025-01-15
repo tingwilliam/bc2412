@@ -1,4 +1,4 @@
-public abstract class Hero {
+public abstract class HHero {
   //hp -Health Point
   //mp -Magic Point
   //Level - > Increase Max HP, Max MP
@@ -33,11 +33,11 @@ public abstract class Hero {
 
 
 
-  //contracter
+  //contructer
 
       //this.attackPower = attackPower;
   //}
-  public Hero(long id, int hp, int mp, int pa, int pd, 
+  public HHero(long id, int hp, int mp, int pa, int pd, 
                int ma,int md, int ag, int cc, int cd) {
 
     this.level = 1;
@@ -93,17 +93,41 @@ public abstract class Hero {
     return this.cd;
   }
   
-
-
-
-  //public void levelUp() {
-      
-  //}
-
-
-
-
-
-
-
+//Setter
+  public void setLevel(int level) {
+    this.level = level;
+  }
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+  public void setMp(int mp) {
+    this.mp = mp;
+  }
+  public void setPa(int pa) {
+    this.pa = pa;
+  }
+  public void setPd(int pd) {
+    this.pd = pd;
+  }
+  public void setMa(int ma) {
+    this.ma = ma;
+  }
+  public void setMd(int md) {
+    this.md = md;
+  }
+  public void setAg(int ag) {
+    this.ag = ag;
+  }
+  public void setCc(int cc) {
+    this.cc = cc;
+  }
+  public void setCd(int cd) {
+    this.cd = cd;
+  }
 }
+
+
+
+
+
+

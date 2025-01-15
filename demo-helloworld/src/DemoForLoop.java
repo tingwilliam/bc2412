@@ -5,6 +5,7 @@ public class DemoForLoop {
     // 2^100
     int x = 2;
     x = x * 2;
+    System.out.println(x);
     x *= 2;
     System.out.println(x);
 
@@ -31,22 +32,24 @@ public class DemoForLoop {
     // Step 10: i++, i become 3
     // Step 11: i < 3 (question) -> false
     // Step 12: exit for loop
-
+    System.out.println(" ");
     for (int i = 0; i < 5; ++i) { // 0,1,2,3,4
       System.out.println("hello)");
     }
-
+    System.out.println(" ");
     // print even numbers
     for (int i = 0; i < 10; i++) {
       if (i % 2 == 0) { // even number definition
         System.out.println(i);
       }
     }
+    System.out.println(" ");
     // print 0 - 100, divided by 3 and divided by 4
-    for (int i = 0; i < 101; i++) {
+    for (int i = 1; i < 100; i++) {
       if (i % 3 == 0 && i % 4 == 0)
         System.out.println(i);
     }
+    System.out.println(" ");
 
     // sum up 0 - 20: 0 + 1 + 2... + 20
     int sum = 0;
@@ -56,7 +59,7 @@ public class DemoForLoop {
     }
     System.out.println(sum); // 210
     // System.out.println(i); ! i is declared within the for loop
-
+    System.out.println(" ");
     // sum up all odd number between 0 - 10
     // sum up all even number between 0 - 10
     // ! Find the difference between evenSum and oddSum -> positive number
@@ -69,6 +72,8 @@ public class DemoForLoop {
     evenSum += i;
       }
     }
+    System.out.println(oddSum); //25
+    System.out.println(evenSum); //30
     //int diff = -1;
     // if (oddSum > evenSum) {
     //   diff = oddSum - evenSum;
@@ -78,16 +83,17 @@ public class DemoForLoop {
     int diff = oddSum > evenSum ? oddSum -evenSum : evenSum - oddSum;
     System.out.println(diff); // 5
 
+    System.out.println(" ");
     for (int i2 = 0; i2 < 11; i2++) {
       if (i2 % 2 == 0)
         System.out.println(sum);
     }
-
+    System.out.println(" ");
 
     // Searching
-    String str = "abcedfghi";
+    String str = "abcdefghi";
 
-    // 1. Check if 'd' exists in the string.
+    // 1. Check if 'd' exists in the string.  
     // for loop + if +chart
     boolean found = false;
     for (int i = 0; i < str.length(); i++) {
@@ -98,7 +104,7 @@ public class DemoForLoop {
     }
 
     System.out.println(found);
-
+    System.out.println(" ");
     // Test Case:
     // 1. "abcdefghi"
     // 2. "abcefghi"
@@ -107,11 +113,11 @@ public class DemoForLoop {
 
     // 2. check if the string value contains given sub-string
     String str2 = "hello";
-    String substr = "ll";
+    String substr = "o";
 
 
     boolean isSubstringExist = false;
-    for (int i = 0; i < str2.length() - substr.length(); i++) {
+    for (int i = 0; i <= str2.length() - substr.length(); i++) {
       if (str2.substring(i, i + substr.length()).equals(substr)) {
         isSubstringExist = true;
         break;
@@ -136,9 +142,11 @@ public class DemoForLoop {
     count = 0;
     for (int i = 0; i < s.length(); i++) {
       if (s.charAt(i) != 'l') {
-        continue; // skip count++, go to i++
+        continue;
+       } // skip count++, go to i++
+      count++;
     }
-    }
+    System.out.println(count);
     
     // 1-100, print all numbers., which can be divided by 3 and 4
     // continue
@@ -159,9 +167,11 @@ public class DemoForLoop {
     // Nested Loop
     for (int i = 0; i < 3 ; i++) {
       // i = 0
+      System.out.print("*");
+
       for (int j = 0; j < 4; j++) {
-        //System.out.println("*"); // print and next line
-        System.out.print("*"); // print
+        System.out.println("*"); // print and next line
+        //System.out.print("*"); // print
       }
       //go to i++
     }

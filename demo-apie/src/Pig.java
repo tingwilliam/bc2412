@@ -1,15 +1,21 @@
+// Class cannot extend more than Parent Class
+
 import java.util.Objects;
 
 public class Pig extends Animal {
   // more attributes
   private int age;
+  private String name;
 
   public Pig(int age) {
     // implicitly calling super()
-    // super(); //animal()
-    // Super("XYZ"); // Animal("XYZ")
+    // super(); // Animal()
+    // super("XYZ"); // Animal("XYZ")
   }
 
+  public Pig(String name) {
+    super(name);
+  }
 
   public Pig(String name, int age) {
     super(name);
@@ -41,7 +47,7 @@ public class Pig extends Animal {
   @Override
   public String toString() {
     return "Pig[" //
-        + "age=" + this.age//
+        + "age=" + this.age //
         + ", name=" + super.getName() //
         + "]";
   }
@@ -51,14 +57,12 @@ public class Pig extends Animal {
   }
 
   public void sleep() {
-    System.out.println("Pig is sleeping...");
+    System.out.println("Pig is sleeping ...");
   }
 
   public static void main(String[] args) {
-    Pig pig = new Pig("ABC", 9); //
-    Pig pig2 = new Pig("IJK", 3);
-
-
+    Pig pig = new Pig(3);
+    Pig pig2 = new Pig("IJK");
 
     pig.sleep();
     System.out.println(pig.getName()); // null
@@ -74,12 +78,13 @@ public class Pig extends Animal {
     }
     if (myPig.equals(checkPig)) {
       System.out.println("Same!");
-      // after overside, if they are having same value of attributes, they shoud be same.
+      // after override, if they are having same value of attributes, they should be same.
     } else {
-      System.out.println("Not Same!"); // before override, because equal () implementation from Object.class
+      System.out.println("Not same!"); // before override, because equal() implementation from Object.class
     }
-    System.out.println(myPig.hashCode());
-    System.out.println(checkPig.hashCode());
+
+    System.out.println(myPig.hashCode()); // 65632
+    System.out.println(checkPig.hashCode()); // 65632
 
     String s = new String("hello");
     String s2 = new String("hello");
@@ -87,9 +92,9 @@ public class Pig extends Animal {
     System.out.println(s.equals("hello")); // true
 
     System.out.println("hello".toString()); // String.class override toString() method
-    System.out.println(pig2); // Pig[age=3, name=ABC]
-  // toString()
-  // hashCode()
-  }
+    System.out.println(myPig); // Pig[age=3, name=ABC]
+    // toString()
+    // hashCode()
 
+  }
 }

@@ -16,11 +16,14 @@ public class DemoArray {
         for (int i = 0; i < arr.length; i++) { // i = 0,1,2
             if (arr[i] >= 10) {
                 System.out.println(arr[i]);
+        
             }
             // declare double array, length = 5
             // assign values10.4, 4.3, 3.3, 1.9, 9.9
             // Sum up all values in the double array
         }
+
+
         double[] arr2 = new double[5];
         arr2[0] = 10.4;
         arr2[1] = 4.3;
@@ -39,7 +42,7 @@ public class DemoArray {
         arr3[0] = "abc";
         arr3[1] = "def";
         arr3[2] = "ijk";
-        String target = "abc";
+        String target = "ijk";
         boolean isTargetExist = false;
         for (int i = 0; i < arr3.length; i++) {
             if (target.equals(arr3[i])) {
@@ -59,6 +62,7 @@ public class DemoArray {
         for (int i = 0; i < arr4.length; i++) {
             System.out.println(ascii[i]);
         }
+        System.out.println(" ");
         // covert the char value to int value, and then assign them to a new int array
         // 98.99.97
         // Find the max ascii value in the int array
@@ -69,7 +73,7 @@ public class DemoArray {
                 // Step 1: i = 0, 98 > 0 -> true -> put 98 to max
                 // Step 2: i = 1, 99> 98 -> put 99 to max
                 // Step 3: i = 2, 97 >98 -> false -> exit
-                System.out.println(max);// 99
+                System.out.println(max);// 98 99
             }
         }
 
@@ -78,14 +82,16 @@ public class DemoArray {
         int[] arr5 = new int[] {9, -8, -99, 98};
         {
             int min = 0;
-            for (int i = 0; i < arr5.length; i++)
-                if (arr5[i] < min)
+            for (int i = 0; i < arr5.length; i++){
+                if (arr5[i] < min){
                     min = arr5[i];
-            {
-                System.out.println(min);
+                }
             }
+            System.out.println(min);//-99
         }
-        // System.out.println(min); //-99
+
+
+
 
         // arry - sum all elements
         int[] arr6 = new int[] {9, 8, 99, 98};
@@ -144,6 +150,9 @@ public class DemoArray {
         int product = 1;
         for (int i = 0; i < arr11.length; i++) {
             product *= arr11[i];
+            // product = product *arr11[i] 
+        
+
         }
         System.out.println(product);// 216
 

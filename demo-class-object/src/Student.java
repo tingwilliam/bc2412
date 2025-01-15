@@ -1,59 +1,66 @@
 public class Student {
+  private long id;
   private int score;
-  private String name;
-  private int candy;
+  private int candyCount;
 
-  public Student(String name, int score) {
+  public Student(long id, int score) {
+    this.id = id;
     this.score = score;
-    this.name = name;
-    this.candy = 0;
-  }
-    public String getName() {
-      return name;
-    }
-    public int getCandy() {
-      return candy;
-    }
-  
-public static void main(String[] args) {
-    Student[] Student = {
-    new Student("Student1", 67),
-    new Student("Student2", 89),
-    new Student("Student3", 50),
-    new Student("Student4", 99),
-    new Student("Student5", 60),
-    new Student("Student6", 59),
-};
-    int totalCandies = 20;{
-          while(totalCandies > 0) {
-            for (Student stu : Student) 
-            if(stu.score >= 80 && totalCandies >=2 ) {
-              stu.candy += 2;
-              totalCandies -= 2;
-            } else if(stu.score >=60 && stu.score <80 && totalCandies >=1 ) {
-              stu.candy += 1;
-              totalCandies -= 1;
-            }
-            //break;
-          }
-          for (Student stu : Student) 
-    System.out.println(stu.getName() + " has " + stu.getCandy() + "Candies");
-    }
-  }
+    this.candyCount = 0;
   }
 
-  //Expected Output:
-  //20 candies -> distribute students according to their score
-  // Rule: Every round of distribution, Above 80 score -> 2 candies; Above 60 - 79 -> 1 candy
+  public int getScore() {
+    return this.score;
+  }
 
-  //Student1: 67 score
-  //Student2: 89 score
-  //Student3: 50 score
-  //Student4: 99 score
-  //Student5: 60 score
-  //Student6: 59 score
+  public long getId() {
+    return this.id;
+  }
 
-  //Expected Output:
+  public int getCandyCount() {
+    return this.candyCount;
+  }
+
+  public void addOneCandy() {
+    this.candyCount++;
+  }
+
+  public void addTwoCandy() {
+    this.candyCount += 2;
+  }
+
+  public static void main(String[] args) {
+    Student[] students = new Student[] {new Student(1L, 67), new Student(2L, 89),
+        new Student(3L, 50), new Student(4L, 99), new Student(5L, 60), new Student(6L, 59)};
+
+    while (Candy.count > 0) {
+      for (Student s : students) {
+        if (s.getScore() >= 80 && Candy.count >= 2) {
+          s.addTwoCandy();
+          Candy.count -= 2;
+        } else if (s.getScore() >= 60 && s.getScore() < 80 && Candy.count >= 1) {
+          s.addOneCandy();
+          Candy.count--;
+        }
+      }
+    }
+    for (Student s : students) {
+      System.out.println("Student " + s.getId() + " has " + s.getCandyCount());
+    }
+  }
+
+  // Question 1:
+  // 20 candies -> distribute students according to their score
+  // Rule: Every round of distribution, Above 80 score -> 2 candies; between 60 - 79 score -> 1 candy
+
+  // Student 1: 67 score
+  // Student 2: 89 score
+  // Student 3: 50 score
+  // Student 4: 99 score
+  // Student 5: 60 score
+  // Student 6: 59 score
+
+  // Expected Output: (Sysout)
   // Student 1 has 4 candies
   // Student 2 has 6 candies
   // Student 3 has 0 candies
@@ -61,27 +68,8 @@ public static void main(String[] args) {
   // Student 5 has 4 candies
   // Student 6 has 0 candies
 
-  //Tips: static -> candyCount (while loop)
+  // Tips: static -> candyCount (while loop)
 
 
 
-    
-
-
-
-  //Question 2:
-  //Candy.class has attribute color (RED, BLUE, YELLOW)
-  //Student2.class to store his own candies
-
-  //20.candies -> distribute students according to their score
-  // Rule: Every round of distribution, Above 80 score -> RED; between 60 - 79 score -> BLUE, else YELLOW
-
-  //Student1: 67 score
-  //Student2: 89 score
-  //Student3: 50 score
-  //Student4: 99 score
-  //Student5: 60 score
-  //Student6: 59 score
-
-  // Expected Output: return Student [] (Student should have Candy attribute)
-
+}

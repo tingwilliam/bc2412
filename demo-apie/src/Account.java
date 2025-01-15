@@ -7,5 +7,12 @@ public class Account {
       this.currency = currency;
       this.balance = balance;
     }
+
+    
+    public static void main(String[] args) {
+      Ball b1 = new Ball(Color.BLUE);
+
+
+    }
   
 }

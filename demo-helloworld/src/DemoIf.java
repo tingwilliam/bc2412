@@ -9,8 +9,10 @@ public class DemoIf {
     String s = "hello";
     // check if length > 3
     if (s.length() > 3) {
-      System.out.println("s length >3.");
-    }
+    System.out.println("s length >3.");
+  }else{
+    System.out.println("s length <3.");
+  }
     // equal(), charAt()
     if (s.equals("hello")) {
       System.out.println("true");

@@ -1,24 +1,17 @@
-
 public class Book {
-  // A library has many books
-  // A Book has attributes, title & author
-  // The library has functions:
-    // 1) add a Book, return void.
-    // 2) removeByTitle, return Book.
-    // 3) searchByTitle, return Book[]
   private String title;
   private String author;
-  
 
   public Book(String title, String author) {
     this.title = title;
     this.author = author;
   }
-public String getTitle() {
-  return this.title;
+
+  public String getTitle() {
+    return this.title;
   }
-public String getAuthor() {
-  return this.author;
+
+  public String getAuthor() {
+    return this.author;
   }
 }
-
