@@ -2,6 +2,7 @@ public class Archer extends HHero {
   private int maxHp;
   private int maxMp;
   private int level;
+  ;
 
 
 public Archer(long id, int hp, int mp, int pa, int pd, 
@@ -9,6 +10,7 @@ public Archer(long id, int hp, int mp, int pa, int pd,
   super(id, hp, mp, pa, pd, ma, md, ag, cc, cd);
   this.maxHp = 200;
   this.maxMp = 100;
+
 }
 
 
@@ -39,6 +41,8 @@ public void setlevel(int level){
     this.maxMp += 100;
   }
 
+
+
     public static void main(String[] args) {
       Archer archer = new Archer(123456, 200, 200, 1, 2, 3, 4, 5, 6, 7);
       //Archer archer2 = new Archer(200, 200);
@@ -48,6 +52,8 @@ public void setlevel(int level){
       System.out.println(archer.toString());
       archer.setlevel(3);
       System.out.println(archer.toString());
+
+
   }
 }
 

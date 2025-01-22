@@ -8,7 +8,7 @@ public class JavaQuest8 {
   public static void main(String[] args) {
     int[] nums = new int[] { -10, 5, 100, 240, 230, 80 }; // Second Max = 230
     {
-      char secondMax = nums.charAt 4;
+      char secondMax = nums.charAt [4];
     for (int i = 0; i < nums.length; i++) 
     if (nums[i] < secondMax)
     secondMax = nums[i];

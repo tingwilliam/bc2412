@@ -16,7 +16,7 @@ public class DemoArray {
         for (int i = 0; i < arr.length; i++) { // i = 0,1,2
             if (arr[i] >= 10) {
                 System.out.println(arr[i]);
-        
+                System.out.println(" ");
             }
             // declare double array, length = 5
             // assign values10.4, 4.3, 3.3, 1.9, 9.9

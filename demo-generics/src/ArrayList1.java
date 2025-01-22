@@ -32,7 +32,7 @@ public class ArrayList1<T> {
     ArrayList1<Book> books = new ArrayList1<>();
     books.add(new Book("ABC"));
     books.add(new Book("IJK"));
-    System.out.println(books.size()); //2
+    System.out.println(books.size());
   }
 
 }

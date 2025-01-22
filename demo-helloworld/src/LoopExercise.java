@@ -59,6 +59,8 @@ public class LoopExercise {
       sum += i;
     }
         System.out.println(sum);
+
+        System.out.println(" ");
     // 7. Check if 'd' exists in the string.
     // print "d is found."
     // otherwise, print "d is not found."
