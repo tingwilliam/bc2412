@@ -60,7 +60,6 @@ public class Mage extends HHero {
     Stave guinsoo = new Stave("Guinsoo", 1, 100, 250, 50);
     mage.setstave(guinsoo); 
 
-    
     System.out.println(mage.toString());
 
     mage.setLevel();
