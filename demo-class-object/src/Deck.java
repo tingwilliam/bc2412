@@ -1,6 +1,7 @@
 public class Deck {
   //52cards
   //private String row;
+  public class Deck{
   private Card[] cards;
 
   //public Deck(String row) {

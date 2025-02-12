@@ -1,28 +1,7 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class StreamExercise {
-
-  public static class Student{
-    private String name;
-    private int score;
-    public Student(String name, int score) {
-      this.name = name;
-      this.score = score;
-    }
-    public String getName() {
-      return this.name;
-    }
-    public int getScore() {
-      return this.score;
-    }
-    public void setScore(int score)
-
-  }
   public static void main(String[] args) {
     // 1. Basic Stream Operations
     // Task: Given a list of integers, use a stream to find all the even numbers, square them, and then
@@ -30,86 +9,40 @@ public class StreamExercise {
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     // Output: [100, 64, 36, 16, 4]
 
-    List<Integer>newIntegers= numbers.stream()
-    .filter(e -> e % 2 == 0)
-    .map(e -> e * e)
-     .sorted((e1, e2) -> e1 > e2 ? -1 : 1)
-    .collect(Collectors.toList());
-    System.out.println(newIntegers);
-
-
     // 2. Filtering and Collecting
     // Task: Given a list of names, filter the names that start with "A" and collect them into a list.
     List<String> names =
         Arrays.asList("Alice", "Bob", "Annie", "David", "Alex");
     // // Output: [Alice, Annie, Alex]
-    List<String> newStr = names.stream()
-    .filter(e ->e.indexOf ('A') !=-1)
-    .collect(Collectors.toList());
-    System.out.println(newStr); 
-
 
     // 3. Finding Maximum and Minimum
     // Task: Given a list of integers, find the maximum and minimum values using Streams.
     List<Integer> numbers2 = Arrays.asList(10, 20, 5, 30, 15);
-    //Output: Max: 30
-    //Output: Min: 5
-    List<Integer> sortedList = numbers2.stream()
-    .sorted()
-    .collect(Collectors.toList());
-    
-    Integer maxNum = sortedList.get(sortedList.size() -1);
-    Integer minNum = sortedList.get(0);
-    System.out.println("Max: " + maxNum); 
-    System.out.println("Min: " + minNum); 
-
+    // Output: Max: 30
+    // Output: Min: 5
 
     // 4. Mapping to a List of Lengths
     // Task: Given a list of strings, map each string to its length and collect the lengths into a
     // List<Integer>
     List<String> words = Arrays.asList("apple", "banana", "pear");
     // Output: [5, 6, 4] (List)
-    List<Integer> wordLengths = words.stream() //
-    .map(e->e.length())
-    .collect(Collectors.toList());
-    System.out.println(wordLengths);
 
     // 5. Counting Elements
     // Task: Given a list of strings, count how many strings have a length greater than 3.
-    // List<String> words2 = Arrays.asList("hi", "hello", "world", "java", "stream");
+    // List<String> words = Arrays.asList("hi", "hello", "world", "java", "stream");
     // Output: 4
 
-    long count = words2.stream().filter(e -> e.length() >3).count();
-    //count() -> Termimal
-
-    // Here are more advanced exercises focused on using filter, map, and collect to transform data into
-    // different data structures:
     // 6. Filtering and Collecting to a Set
     // Task: Given a list of numbers, filter out all numbers greater than 10 and collect them into a
     // Set.
     List<Integer> numbers3 = Arrays.asList(5, 10, 15, 20, 10, 5);
-    //Output: [15, 20]
-     Set<Integer>result6 = 
-     numbers.stream().filter(e -> e> 10).collect(Collectors.toSet());
-     System.out.println(numbers3);
-
-
+    // // Output: [15, 20]
 
     // 7. Mapping to a Map (Key-Value Pairs)
     // Task: Given a list of students with their names and scores, map them to a Map<String, Integer>,
     // where the key is the student's name and the value is their score.
 
     // Create Student Class
-    //Java 9: List.of(): You can read the objects, but you cannot add/remove/modify
-    //It is 
-    List<Student> students = List.of(new Student("Alice", 85), new Student("Bok", 75));
-    //students.set(0, new Student("Vincent",90));//java.lang.UnsupportedOperationException
-    //students.get(0).setScore(80);//OK
-    Map<String, Integer> studentMap = students.stream()
-    .collect(Collectors.toMap(stu->stu.getName(), stu->stu.getScore()));
-    System.out.println(studentMap);
-
-
     // new Student("Alice", 85)
     // new Student("Bob", 75)
 
@@ -271,7 +204,7 @@ public class StreamExercise {
     // Output: Optional[tiger]
 
     List<String> animals2 = Arrays.asList("cat", "dog", "bird");
-    // Output: Optional[null]
+    // Output: Optional.empty
 
     // 26. Custom Collector
     // Task: Create a custom collector that collects the elements of a stream and remove all duplicates
